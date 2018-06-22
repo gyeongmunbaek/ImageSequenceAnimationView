@@ -53,7 +53,7 @@ abstract public class BitmapCreatorParent {
 
             long lMaxMemory = Runtime.getRuntime().maxMemory();
             long lAllocationMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-            long lRealfreeMemory = lMaxMemory - lAllocationMemory;
+            long lRealFreeMemory = lMaxMemory - lAllocationMemory;
 
             BitmapFactory.Options options = new BitmapFactory.Options();
             options.inJustDecodeBounds = true;
@@ -61,7 +61,7 @@ abstract public class BitmapCreatorParent {
 
             float lNeedsMemory = (options.outWidth * mDensity) * (options.outHeight * mDensity) * 4;
 
-            if (lRealfreeMemory - lNeedsMemory > 0) {
+            if (lRealFreeMemory - lNeedsMemory > 0) {
                 try {
                     mBitMap = BitmapFactory.decodeResource(mContext.getResources(), resID);
                 } catch (OutOfMemoryError e) {

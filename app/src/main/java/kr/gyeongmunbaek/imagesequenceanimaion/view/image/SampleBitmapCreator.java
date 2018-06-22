@@ -22,11 +22,13 @@ public class SampleBitmapCreator extends BitmapCreatorParent {
 
     @Override
     public String getFileNamePrefix() {
+        // set prefix string of image file name
         return "output_";
     }
 
     @Override
     public int getStartIndex() {
+        // set images start file index. ex) in output_0"0"
         return 0;
     }
 }
