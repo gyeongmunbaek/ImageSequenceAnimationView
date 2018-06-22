@@ -1,2 +1,5 @@
 # ImageSequenceAnimationView
-Play sequence images
+https://github.com/gyeongmunbaek/ImageSequenceAnimationView/
+
+# project
+ImageSequenceAnimationView can animate successive images.
